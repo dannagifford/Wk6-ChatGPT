@@ -15,6 +15,10 @@ In this unit, we'll explore how ChatGPT, a state-of-the-art language model, can 
 
 NB: ChatGPT was used in the preparation of this workshop.
 
+## Slides
+[![Link to open research movement slides](../images/ChatGPT.png){width="75%"}](https://docs.google.com/presentation/d/1KYO6pKj8bdMm4HKKCUOP9Of1uWSbhCCxtadddH-rTk4/edit?usp=sharing)
+
+
 # ChatGPT Overview
 
 ## What is ChatGPT?
@@ -34,7 +38,7 @@ ChatGPT, like other language models, generates code by predicting and generating
 
 When provided with a coding task or prompt, ChatGPT processes the input and attempts to comprehend the desired outcome. Drawing from training data, which includes examples of various programming languages and coding patterns, ChatGPT generates code snippets or scripts that it believes fulfill the specified task. It uses its knowledge of programming syntax, logic, and conventions to craft code that aligns with the task's requirements. While ChatGPT's code generation can aid in automating certain coding tasks, it's important for users to review and refine the generated code to ensure correctness and adherence to best coding practices, especially in complex or critical software development scenarios.
 
-![A screenshot of ChatGPT output where it has been asked to format some text in R Markdown format](images/format-Rmarkdown.png)
+![A screenshot of ChatGPT output where it has been asked to format some text in R Markdown format](../images/format-Rmarkdown.png)
 
 ## Generating Documentation
 
@@ -45,7 +49,7 @@ ChatGPT can be utilized to automate the process of generating code documentation
 ChatGPT can assist in data exploration by providing explanations and insights into the data.ChatGPT offers comprehensive support for data exploration. It can generate descriptive summaries, highlighting crucial statistics, trends, and data distributions, aiding data explorers in identifying patterns and anomalies. Moreover, when provided with variable names, ChatGPT provides explanations about their meaning, data types, and potential interpretations, particularly useful for complex datasets. It also offers guidance on data visualization techniques, suggesting appropriate charts and plots to effectively convey data insights. ChatGPT assists in data cleaning by offering suggestions and code snippets to handle missing values, outliers, and duplicates. Additionally, it provides statistical insights, including measures of central tendency and correlations between variables, facilitating the identification of data relationships. It also adds context by explaining data sources, collection methods, and potential limitations or biases. In interactive data exploration, ChatGPT responds to specific user queries, delivering rapid access to relevant information.
 
 Here I asked ChatGPT whether ANOVA would be a good way to analyse some data, or if there was a better method. It (correctly) suggests that logistic regression is more appropriate here. It also provides code in R on how to analyse it.  
-![A screenshot of ChatGPT output where it correctly suggests that logistic regression would be better than ANOVA for analysing binary data. It also provides code in R on how to analyse it.](images/suggest-model.png)
+![A screenshot of ChatGPT output where it correctly suggests that logistic regression would be better than ANOVA for analysing binary data. It also provides code in R on how to analyse it.](../images/suggest-model.png)
 
 # Best Practices and Considerations
 
