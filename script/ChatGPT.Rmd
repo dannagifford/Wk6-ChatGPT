@@ -1,0 +1,74 @@
+---
+title: Use of ChatGPT for R and Reproducible Data Science
+author:
+    - Dr Danna Gifford, Unit coordinator (2023), danna.gifford@manchester.ac.uk
+date: ""
+output: 
+ html_document:
+  theme: flatly
+  toc: true
+  toc_float: true
+---
+# Introduction
+
+In this unit, we'll explore how ChatGPT, a state-of-the-art language model, can be leveraged in R programming for enhancing reproducible data science practices. We'll delve into the capabilities of ChatGPT, discuss its potential applications in data science workflows, and learn how it can contribute to creating more transparent and efficient research processes.  
+
+NB: ChatGPT was used in the preparation of this workshop.
+
+# ChatGPT Overview
+
+## What is ChatGPT?
+
+ChatGPT is a powerful language model developed by OpenAI, capable of generating human-like text based on the input it receives. It can be used for various natural language processing tasks, including text generation, summarization, and answering questions.
+
+ChatGPT is developed by OpenAI, based on the GPT (Generative Pre-trained Transformer) architecture. It represents a significant advancement in natural language processing (NLP) technology, due to training on data sourced from the internet. ChatGPT's primary capability lies in generating human-like text and providing coherent responses based on textual input. ChatGPT can be used for various NLP tasks, such as text generation, text completion, question answering, and language translation. Its contextual understanding allows it to generate responses that are contextually relevant and coherent.
+
+However, generative AI models, including ChatGPT, are known to generate mistakes or 'hallucinations'. Hallucination in AI pertains to the generation of outputs that may appear plausible but are either factually incorrect or unrelated to the provided context. These outputs often result from the AI model's inherent biases, limited real-world understanding, or constraints in its training data. In simpler terms, the AI system 'hallucinates' information not explicitly part of its training data, resulting in responses that are unreliable or misleading. For example, User input: "When did Leonardo da Vinci paint the Mona Lisa?" AI-generated response: "Leonardo da Vinci painted the Mona Lisa in 1815." (Incorrect: The Mona Lisa was painted between 1503 and 1506, or perhaps continuing until 1517.)
+
+
+# Applications in Reproducible Data Science
+
+## Generating code with ChatGPT
+
+ChatGPT, like other language models, generates code by predicting and generating sequences of text based on the input it receives. While ChatGPT isn't specifically designed for coding tasks, it can be used to write code in various programming languages, including R, Python, JavaScript, and others.
+
+When provided with a coding task or prompt, ChatGPT processes the input and attempts to comprehend the desired outcome. Drawing from training data, which includes examples of various programming languages and coding patterns, ChatGPT generates code snippets or scripts that it believes fulfill the specified task. It uses its knowledge of programming syntax, logic, and conventions to craft code that aligns with the task's requirements. While ChatGPT's code generation can aid in automating certain coding tasks, it's important for users to review and refine the generated code to ensure correctness and adherence to best coding practices, especially in complex or critical software development scenarios.
+
+![A screenshot of ChatGPT output where it has been asked to format some text in R Markdown format](images/format-Rmarkdown.png)
+
+## Generating Documentation
+
+ChatGPT can be utilized to automate the process of generating code documentation. When provided with code snippets, it can analyze and produce explanations or comments that clarify the code's functionality, inputs, outputs, and critical steps. This automated documentation can enhance code readability and comprehension for developers and collaborators. It also simplifies the creation of introductory sections and summaries for codebases, aiding in better contextualization of the code. By incorporating ChatGPT into the documentation workflow, it can help streamline the process, save time, and ensure consistent and coherent explanations for code, potentially contributing to improved code quality and collaboration.
+
+## Assisting in Data Exploration
+
+ChatGPT can assist in data exploration by providing explanations and insights into the data.ChatGPT offers comprehensive support for data exploration. It can generate descriptive summaries, highlighting crucial statistics, trends, and data distributions, aiding data explorers in identifying patterns and anomalies. Moreover, when provided with variable names, ChatGPT provides explanations about their meaning, data types, and potential interpretations, particularly useful for complex datasets. It also offers guidance on data visualization techniques, suggesting appropriate charts and plots to effectively convey data insights. ChatGPT assists in data cleaning by offering suggestions and code snippets to handle missing values, outliers, and duplicates. Additionally, it provides statistical insights, including measures of central tendency and correlations between variables, facilitating the identification of data relationships. It also adds context by explaining data sources, collection methods, and potential limitations or biases. In interactive data exploration, ChatGPT responds to specific user queries, delivering rapid access to relevant information.
+
+Here I asked ChatGPT whether ANOVA would be a good way to analyse some data, or if there was a better method. It (correctly) suggests that logistic regression is more appropriate here. It also provides code in R on how to analyse it.  
+![A screenshot of ChatGPT output where it correctly suggests that logistic regression would be better than ANOVA for analysing binary data. It also provides code in R on how to analyse it.](images/suggest-model.png)
+
+# Best Practices and Considerations
+
+In utilizing ChatGPT within R, it's essential to adhere to best practices and considerations. These encompass clear task definitions to ensure precise responses, thorough review and validation of ChatGPT-generated output, and potential fine-tuning of the model for domain-specific performance enhancements. Caution should be exercised when dealing with sensitive data to safeguard data privacy, avoiding any input or generation of private or proprietary information. Additionally, ethical use is paramount, requiring responsible content generation and a commitment to avoiding harmful, biased, or discriminatory outputs, all while remaining vigilant about potential biases in the training data to ensure fairness.
+
+## Considerations:
+
+When integrating ChatGPT into applications involving data input or retrieval, prioritizing data security is paramount to safeguard sensitive information. It's crucial to recognize that ChatGPT has inherent limitations and may not consistently provide entirely accurate or comprehensive information; it serves as a support tool, not a replacement for domain expertise. Additionally, being mindful of potential biases in the language and content generated by ChatGPT is essential, requiring efforts to address these biases and uphold fairness in the output. Given the variability in ChatGPT's responses based on input phrasing, it's advisable to anticipate response variations and review multiple responses as needed. Assessing the suitability of ChatGPT for specific use cases is crucial; for some tasks, a more specialized model or expert consultation may be necessary. Furthermore, encouraging users to provide feedback on ChatGPT-generated content contributes to ongoing improvements in accuracy and utility. Finally, staying well-informed about the terms of service and usage policies of the platform or service hosting ChatGPT is vital to ensure compliance with relevant guidelines.
+
+## Pitfalls
+
+Utilizing ChatGPT for reproducible data science offers numerous advantages but also comes with potential pitfalls. One major challenge lies in ChatGPT's limited context understanding, which can lead to responses lacking the necessary nuance for data science projects. Moreover, the risk of hallucination can potentially produce incorrect or misleading explanations or analysis code. Its general-purpose nature may also limit its effectiveness in highly specialized data science domains. Ethical concerns regarding biases in generated content require careful oversight, and there's a risk of overreliance on automation, potentially compromising analysis quality. Additionally, ChatGPT's responses can vary with input phrasing, making consistency and reproducibility challenging. Security and privacy concerns arise when handling sensitive data, and complex coding tasks may still require human expertise for validation. To address these challenges, it's crucial to use ChatGPT as a supplementary tool and maintain human oversight, validation, and domain expertise to ensure the reliability and reproducibility of data science processes.
+
+# ChatGPT within R using gptstudio
+
+ChatGPT can be directly integrated into R studio using a newly-developed package known as [`gptstudio`](https://github.com/MichelNivard/gptstudio). `gptstudio` was originally developed by [Michel Nivard](https://github.com/MichelNivard) and is now in active development by a number of users.
+
+Watch this video from Lyndon Walker on how to install  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QQfDTLExoNU?si=ntLWQW-oJcKeqo9T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+# Your challenge
+
+Your challenge is to explore ChatGPT's capabilities--can you use it to reformat some text you've written in R Markdown style? Can you give it messy R code and ask it to reformat in the `tidyverse` style? Can you use it to provide suggestions on your writing style? Can you induce it to hallucinate, i.e. tell you 'facts' that you know not to be true?
+
+Try ChatGPT's Free Research Preview by signing up at [OpenAI's website](https://chat.openai.com/)
+
